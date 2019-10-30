@@ -1,22 +1,22 @@
+import Axios from "axios";
+
 //import axios from 'axios';
 const state = {
-  todos: [
-    {
-      id: 1,
-      title: "text one"
-    },
-    {
-      id: 2,
-      title: "text two"
-    }
-  ]
+  todos: []
 };
 
 const getters = {
   allTodos: state => state.todos
 };
 
-const actions = {};
+const actions = {
+  async fetchTodos() {
+    const response = await Axios.get(
+      "https://jsonplaceholder.typicode.com/todos"
+    );
+    alert(response.data);
+  }
+};
 
 const mutations = {};
 
