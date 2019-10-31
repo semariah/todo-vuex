@@ -16,7 +16,7 @@ export default {
   },
   computed: mapGetters(["allTodos"]),
   created() {
-    this.fetchTodos;
+    this.fetchTodos();
   }
 };
 </script>
